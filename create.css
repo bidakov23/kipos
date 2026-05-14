@@ -1,0 +1,91 @@
+
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+
+.create-container {
+    width: 100%;
+    max-width: 500px;
+    background-color: white;
+    border: 1px solid #dbdbdb;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+
+.create-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 16px;
+    border-bottom: 1px solid #dbdbdb;
+}
+
+.create-header strong {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+
+.share-btn {
+    background: none;
+    border: none;
+    color: #0095f6; 
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.share-btn:hover {
+    color: #00376b;
+}
+
+
+.upload-area {
+    width: 100%;
+    aspect-ratio: 1 / 1; 
+    background-color: #fafafa;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #dbdbdb;
+    color: #262626;
+}
+
+.upload-area p {
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+
+.caption-area {
+    padding: 16px;
+}
+
+.caption-area textarea {
+    width: 100%;
+    border: none;
+    resize: none; 
+    font-size: 14px;
+    color: #262626;
+    outline: none; 
+    line-height: 1.5;
+}
+
+.caption-area textarea::placeholder {
+    color: #8e8e8e;
+}

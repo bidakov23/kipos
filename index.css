@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playwrite+NO:wght@100..400&family=Roboto:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital@0;1&display=swap');
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #f0f2f5;
+    color: #333;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navbar */
+.navbar {
+    background: linear-gradient(to right, #b8860b, #daa520);
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: white;
+    font-style: italic;
+    font-family: 'Playwrite NO', cursive;
+    font-size: 24px;
+}
+
+.search-bar input {
+    padding: 5px 15px;
+    border-radius: 20px;
+    border: none;
+    width: 250px;
+}
+
+.nav-icons {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.icon-btn {
+    background: none;
+    color: rgb(0, 0, 0);
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 2px 5px;
+}
+
+.profile-circle {
+    width: 35px;
+    height: 35px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.icon-btn{
+    filter: grayscale(100%) brightness(0); /* Делает любой эмодзи абсолютно черным */
+}
+
+/* посты */
+.main-content {
+    display: flex;
+    margin-top: 30px;
+    gap: 30px;
+}
+
+.feed {
+    flex: 2;
+}
+
+.sidebar {
+    flex: 1;
+}
+
+/* пост */
+.post-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+.post-header {
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    background: #ddd;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.user-info .username {
+    display: block;
+    font-weight: bold;
+}
+
+.user-info .location {
+    font-size: 0.8em;
+    color: #777;
+}
+
+.more-btn {
+    position: absolute;
+    right: 15px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.post-image {
+    width: 100%;
+    display: block;
+}
+
+.post-footer {
+    padding: 15px;
+}
+
+.actions {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.bookmark {
+    margin-left: auto;
+}
+
+.hashtags {
+    color: #00376b;
+    margin-top: 5px;
+}
+
+.post-meta {
+    margin-top: 10px;
+    font-size: 0.8em;
+    color: #999;
+}
+
+/* чаты */
+
+.chats-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    position: fixed;
+}
+
+.chat-list {
+    list-style: none;
+    margin-top: 15px;
+}
+
+.chat-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.chat-avatar {
+    width: 40px;
+    height: 40px;
+    background: #eee;
+    border-radius: 50%;
+    margin-right: 12px;
+    position: relative;
+}
+
+.chat-avatar.online::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #4caf50;
+    border: 2px solid white;
+    border-radius: 50%;
+    bottom: 0;
+    right: 0;
+}
+
+.chat-text strong {
+    font-size: 0.9em;
+}
+
+.chat-text p {
+    font-size: 0.8em;
+    color: #777;
+}
+
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.chat-modal {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.2);
+    z-index: 2000;
+}
+.chat-modal-header {
+    background: var(--brand-gradient);
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    border-radius: 12px 12px 0 0;
+    display: flex;
+    justify-content: space-between;
+}
+.chat-messages {
+    height: 300px;
+    padding: 15px;
+    overflow-y: auto;
+    font-size: 14px;
+}
+.chat-input {
+    padding: 10px;
+    border-top: 1px solid #eee;
+}
+.chat-input input {
+    width: 100%;
+    border: none;
+    outline: none;
+}
+
+
+
+
+/* сообщения */
+.msg {
+    margin-bottom: 10px;
+    padding: 8px 12px;
+    border-radius: 15px;
+    max-width: 80%;
+    clear: both;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+/* мои */
+.sent {
+    background-color: #daa520;
+    color: white;
+    float: right;
+    border-bottom-right-radius: 2px;
+}
+
+/* Ответы друга (слева) */
+.received {
+    background-color: #f1f1f1;
+    color: #333;
+    float: left;
+    border-bottom-left-radius: 2px;
+}
+
+/* Очистка потока для контейнера сообщений */
+.chat-messages {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    height: 300px;
+    padding: 10px;
+}
+
+
+
+

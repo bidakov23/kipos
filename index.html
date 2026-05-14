@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kipos Social Media</title>
+    <script src="index.js" defer></script>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <!-- Навигационная панель -->
+    <header class="navbar">
+        <div class="container nav-content">
+            <h1 class="logo">Kipos</h1>
+            <div class="search-bar">
+                <input type="text" id="postSearch" placeholder="Search...">
+            </div>
+                <div class="nav-icons">
+                    <a href="create.html" class="icon-btn" style="text-decoration: none;">➕</a>
+                    <a href="profile.html" class="profile-circle" style="text-decoration: none;">👤</a>
+                </div>
+        </div>
+    </header>
+
+    <main class="main-content container">
+        <section class="feed">
+            <article class="post-card">
+                <div class="post-header">
+                    <div class="user-avatar"></div>
+                    <div class="user-info">
+                        <span class="username">Михаил</span>
+                        <span class="location">Dagestan</span>
+                    </div>
+                    <button class="more-btn">•••</button>
+                </div>
+                
+                <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80&w=1000" alt="Landscape" class="post-image">
+                
+                <div class="post-footer">
+                    <div class="actions">
+                        <span>❤️</span> <span>💬</span> <span>✈️</span>
+                        <span class="bookmark">🔖</span>
+                    </div>
+                    <div class="likes">511 Лайков</div>
+                    <div class="description">
+                        <strong>Михаил:</strong> Сегодня решил пройтись по горам и нашел такие замечательные места
+                        <div class="hashtags">#Дагестан #Природа #Горы #Туризм</div>
+                    </div>
+                    <div class="post-meta">
+                        <span class="views">Просмотры 2.5K</span>
+                        <span class="date">1 День нназад</span>
+                    </div>
+                </div>
+            </article>
+<article class="post-card">
+    <div class="post-header">
+        <div class="user-avatar" style="background-image: url('https://i.pravatar.cc/150?u=mikhail'); background-size: cover;"></div>
+        <div class="user-info">
+            <span class="username">Лев</span>
+            <span class="location">Krasnodar</span>
+        </div>
+        <button class="more-btn">•••</button>
+    </div>
+    
+    <img src="https://avatars.mds.yandex.net/i?id=942747086003945c22d9cdb8994fa72c_l-5696766-images-thumbs&n=13">
+    
+    <div class="post-footer">
+        <div class="actions">
+            <span>❤️</span> <span>💬</span> <span>✈️</span>
+            <span class="bookmark">🔖</span>
+        </div>
+        <div class="likes">842 Лайков</div>
+        <div class="description">
+            <strong>Лев:</strong> Пришелв заповедник на шашыки
+            <div class="hashtags">#лес #преключения #шашлыки #уадчный день</div>
+        </div>
+        <div class="post-meta">
+            <span class="views">просмотров 4.1K</span>
+            <span class="date">3 часа назад</span>
+        </div>
+    </div>
+</article>
+
+<!-- Пост 3: Океан и закат -->
+<article class="post-card">
+    <div class="post-header">
+        <div class="user-avatar" style="background-image: url('https://i.pravatar.cc/150?u=mikhail'); background-size: cover;"></div>
+        <div class="user-info">
+            <span class="username">Даниэль</span>
+            <span class="location">Krasnodar</span>
+        </div>
+        <button class="more-btn">•••</button>
+    </div>
+    
+    <img src="https://i.pinimg.com/736x/31/cf/d7/31cfd76c784ad5c5966d13add60dd399.jpg">
+    
+    <div class="post-footer">
+        <div class="actions">
+            <span>❤️</span> <span>💬</span> <span>✈️</span>
+            <span class="bookmark">🔖</span>
+        </div>
+        <div class="likes">1.2K Likes</div>
+        <div class="description">
+            <strong>Даниэль:</strong> Идеальное завершение дня. Слушать звук мотора моей ласточки
+            <div class="hashtags">#приора #хасанатор #космолет #несмотреть</div>
+        </div>
+        <div class="post-meta">
+            <span class="views">Просмотров 10.5K</span>
+            <span class="date">30-03</span>
+        </div>
+    </div>
+</article>
+        </section>
+
+        <!-- Боковая панель (Чаты) -->
+        <aside class="sidebar">
+            <div class="chats-card">
+                <h3>Чаты</h3>
+                <ul class="chat-list">
+                    <li class="chat-item">
+                        <div class="chat-avatar online"></div>
+                        <div class="chat-text">
+                            <strong>Михаил Киселев</strong>
+                            <p>Привет! Как дела?</p>
+                        </div>
+                    </li>
+                    <li class="chat-item">
+                        <div class="chat-avatar"></div>
+                        <div class="chat-text">
+                            <strong>Аришин Лев</strong>
+                            <p>Скинь код по проекту...</p>
+                        </div>
+                    </li>
+                    <li class="chat-item">
+                        <div class="chat-avatar"></div>
+                        <div class="chat-text">
+                            <strong>Даниелс</strong>
+                            <p>Увидимся в колледже!</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+    </main>
+    <div id="chatModal" class="chat-modal">
+    <div class="chat-modal-header">
+        <span id="chatFriendName">Чат</span>
+        <button onclick="closeChat()">✕</button>
+    </div>
+    <div class="chat-messages" id="chatMessages">
+        <p class="msg">Привет! Как дела?</p>
+    </div>
+    <div class="chat-input">
+        <input type="text" id="chatInputField" placeholder="Напишите сообщение...">
+    </div>
+</div>
+
+</body>
+</html>

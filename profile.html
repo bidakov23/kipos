@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Kipos | Profile</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .profile-header {
+            display: flex;
+            padding: 40px 20px;
+            gap: 50px;
+            border-bottom: 1px solid #dbdbdb;
+            margin-bottom: 20px;
+        }
+        .profile-img-big {
+            width: 150px;
+            height: 150px;
+            background: #eee;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 60px;
+        }
+        .profile-stats {
+            display: flex;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+        .grid-item {
+            aspect-ratio: 1 / 1;
+            background: #ddd;
+            background-size: cover;
+            background-position: center;
+        }
+        .icon-btn{
+            filter: grayscale(100%) brightness(0); 
+        }
+        
+    </style>
+</head>
+<body>
+    <header class="navbar">
+        <div class="container nav-content">
+            <a href="index.html" class="logo" style="text-decoration: none;">Kipos</a>
+            <div class="nav-icons">
+                <a href="create.html" class="icon-btn" style="text-decoration: none;">➕</a>
+                <a href="profile.html" class="profile-circle" style="text-decoration: none; border: 2px solid black;">👤</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="profile-header">
+            <div class="profile-img-big">👤</div>
+            <div class="profile-info">
+                <h2>Даниил</h2>
+                <div class="profile-stats">
+                    <span><strong>3</strong> публикации</span>
+                    <span><strong>11</strong> подписчиков</span>
+                    <span><strong>20</strong> подписок</span>
+                </div>
+                <strong>Даниил</strong>
+                <p>Ученик колледжа КИПО</p>
+            </div>
+        </section>
+
+        <div class="grid-container">
+            <div class="grid-item" style="background-image: url('https://picsum.photos/400/400?random=1')"></div>
+            <div class="grid-item" style="background-image: url('https://picsum.photos/400/400?random=2')"></div>
+            <div class="grid-item" style="background-image: url('https://picsum.photos/400/400?random=3')"></div>
+        </div>
+    </main>
+
+</body>
+</html>
